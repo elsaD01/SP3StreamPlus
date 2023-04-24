@@ -4,4 +4,11 @@ public abstract class Media {
     public String genre;
     public int age;
 
+    public Media(int releaseYear, String rating, String genre, int age) {
+        this.releaseYear = releaseYear;
+        this.rating = rating;
+        this.genre = genre;
+        this.age = age;
+    }
+
 }
