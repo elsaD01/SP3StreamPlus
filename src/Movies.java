@@ -1,19 +1,30 @@
 public class Movies extends Media{
 
+    public String name;
     public String movieSeries;
     public String rating;
     public String genre;
     public int age;
 
 
-    public Movies(int releaseYear, String rating, String genre, int age) {
+
+    public Movies(String name, int releaseYear, String rating, String genre, int age) {
         super(releaseYear, rating, genre, age);
+        this.name = name;
         this.releaseYear = releaseYear;
         this.rating = rating;
         this.genre = genre;
         this.age = age;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getRating() {
         return rating;
     }
