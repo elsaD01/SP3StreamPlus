@@ -11,7 +11,7 @@ public class Series extends Media{
 
 
     public Series(String name, int releaseYear, String rating, String genre, int age) {
-        super(releaseYear, rating, genre, age);
+        super(name, releaseYear, rating, genre, age);
         this.name = name;
         this.releaseYear = releaseYear;
         this.rating = rating;

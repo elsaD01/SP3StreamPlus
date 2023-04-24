@@ -9,7 +9,7 @@ public class Movies extends Media{
 
 
     public Movies(String name, int releaseYear, String rating, String genre, int age) {
-        super(releaseYear, rating, genre, age);
+        super(name, releaseYear, rating, genre, age);
         this.name = name;
         this.releaseYear = releaseYear;
         this.rating = rating;
