@@ -4,8 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UserHandler {
+
+
 
 
     ArrayList<User> users = new ArrayList<>();
@@ -19,8 +23,11 @@ public class UserHandler {
 
     public boolean login(String username, String password) {
         for (User user : users) {
-            if (user.getFullName().equals(username) && user.getPassword().equals(password))//should username = name
+
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)){//should username = name
                 return true;
+            }
+System.out.println(user.getUsername() +(user.getUsername().equals(username) && user.getPassword().equals(password )));
 
         }
         return false;
@@ -30,6 +37,9 @@ public class UserHandler {
 
     public boolean createUser(String fullName, String username, String password) {
         boolean usernameTaken = false;
+        if(!isPasswordValid(password)){
+            return false;
+        }
         for (User users :
                 users) {
             if (users.getFullName().equals(username))
@@ -40,32 +50,30 @@ public class UserHandler {
         return true;
     }
 
-    boolean isPasswordValid(String password) {
-
-
-        if (password == null || password.length() <= 5 || password.length() > 14  ) {
-
-            System.out.println("the password  is not valid try again ");
-            return false;
-
-        } else {
-
-            int n =Integer.parseInt(password);
-            if(password.equals(n) || password.length() <= 5 || password.length() > 14  );
-            return true;
-        } else {
-        if (password.matches(".*\\d.*")) {
-            // Password contains at least one digit
-            return true;
-        } else {
-            System.out.println("The password must contain at least one digit. Please try again.");
+    public boolean isPasswordValid(String password) {
+        if(password == null || password.length() <= 5 || password.length() >20){
+            System.out.println("the password is not meeting conditons ");
             return false;
         }
+        else{
+
+            return true ;
+        }
     }
-}
 
 
+/*
+        String pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?!.*\\s).{5,20}$";
+        Pattern pattern1 = Pattern.compile(pattern);
+        Matcher matcher = pattern1.matcher(password);
+        if(password.equals(pattern)) {
+            return matcher.matches();
+        }else{
+            return false;
+        }
 
+    }
+*/
 
     public void loadusers() {
         try {
@@ -86,17 +94,20 @@ public class UserHandler {
         try{
             FileWriter writer = new FileWriter (file);
             for (User users : users){
-                writer.write(users.getFullName() +"" +users.getUsername() +""+ users.getPassword());
+                writer.write(users.getFullName() +"," +users.getUsername() +","+ users.getPassword()+
+                        "\n");
             }
             writer.close();
         } catch (IOException e) {
-            System.out.println("system is not workin currently ");
+            System.out.println("system is not working currently ");
 
         }
 
 
     }
-}
+
+
+    }
 
 
 
