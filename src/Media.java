@@ -1,11 +1,11 @@
 public abstract class Media {
     public String name;
     public int releaseYear;
-    public String rating;
+    public double rating;
     public String genre;
     public int age;
 
-    public Media(String name, int releaseYear, String rating, String genre, int age) {
+    public Media(String name, int releaseYear, double rating, String genre, int age) {
         this.name = name;
         this.releaseYear = releaseYear;
         this.rating = rating;
@@ -13,4 +13,10 @@ public abstract class Media {
         this.age = age;
     }
 
-}
+    public  abstract int releaseDate();
+    public  abstract double rating();
+    public abstract String genre();
+    public abstract int age ();
+
+    }
+

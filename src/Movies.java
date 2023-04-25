@@ -2,13 +2,12 @@ public class Movies extends Media{
 
     public String name;
     public String movieSeries;
-    public String rating;
+    public double rating;
     public String genre;
     public int age;
 
 
-
-    public Movies(String name, int releaseYear, String rating, String genre, int age) {
+    public Movies(String name, int releaseYear, double rating, String genre, int age) {
         super(name, releaseYear, rating, genre, age);
         this.name = name;
         this.releaseYear = releaseYear;
@@ -18,6 +17,32 @@ public class Movies extends Media{
     }
 
 
+    @Override
+    public int releaseDate() {
+        return releaseYear;
+    }
+
+    @Override
+    public double rating() {
+        return rating;
+    }
+
+    @Override
+    public String genre() {
+        return genre;
+    }
+
+    @Override
+    public int age() {
+        return age;
+    }
+
+
+
+
+
+
+
     public String getName() {
         return name;
     }
@@ -25,13 +50,7 @@ public class Movies extends Media{
     public void setName(String name) {
         this.name = name;
     }
-    public String getRating() {
-        return rating;
-    }
 
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
 
     public String getGenre() {
         return genre;
