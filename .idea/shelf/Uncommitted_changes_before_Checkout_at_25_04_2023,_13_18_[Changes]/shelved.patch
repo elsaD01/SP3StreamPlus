@@ -1,0 +1,198 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,14 +4,37 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="6dae8378-5c46-41b1-91cd-e9a8c9e8b969" name="Changes" comment="" />
++    <list default="true" id="6dae8378-5c46-41b1-91cd-e9a8c9e8b969" name="Changes" comment="DATAFILE.2">
++      <change afterPath="$PROJECT_DIR$/src/Collection.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/TextUI.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="Main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GithubProjectSettings">
++    <option name="branchProtectionPatterns">
++      <list>
++        <option value="master" />
++      </list>
++    </option>
+   </component>
+   <component name="ProjectCodeStyleSettingsMigration">
+     <option name="version" value="2" />
+@@ -25,13 +48,19 @@
+     <option name="showLibraryContents" value="true" />
+     <option name="showMembers" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "/Users/elsa/Desktop/SP3Stream/data",
++    "node.js.selected.package.tslint": "(autodetect)"
+   }
+-}</component>
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/data" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -41,6 +70,14 @@
+       <option name="presentableId" value="Default" />
+       <updated>1682327094523</updated>
+     </task>
++    <task id="LOCAL-00001" summary="DATAFILE.2">
++      <created>1682336312554</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1682336312554</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -54,4 +91,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="DATAFILE.2" />
++    <option name="LAST_COMMIT_MESSAGE" value="DATAFILE.2" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/TextUI.java
+===================================================================
+diff --git a/src/TextUI.java b/src/TextUI.java
+new file mode 100644
+--- /dev/null	
++++ b/src/TextUI.java	
+@@ -0,0 +1,93 @@
++import java.util.ArrayList;
++import java.util.Collection;
++import java.util.Scanner;
++
++public class TextUI {
++
++
++    public void pickMedia(ArrayList<Media> medias){
++
++        TextUI textUI = new TextUI();
++        System.out.println("Menu: Choose type of media: ");
++
++        Scanner scan = new Scanner(System.in);
++        System.out.println("1-Movies");
++        System.out.println("2-Series");
++        System.out.println("3-Search");
++        System.out.println("4-Watched");
++        System.out.println("5-Saved");
++        int input = scan.nextInt();
++
++        if(input == 1){
++            System.out.println("You choose movies, here's some options");
++            for(int i = 0; i < medias.size(); i++){
++                String movieS = i+ " - " + medias.get(i).getName();
++                System.out.println(movieS);
++            }
++            textUI.chooseMovie();
++            textUI.youHaveChosenMovie();
++
++        }
++
++        else if (input == 2) {
++            System.out.println("You choose series, here's some options");
++        }
++        else if (input == 3){
++            ArrayList<Media> searchResults = textUI.search();
++            for(Media m : searchResults){
++                System.out.println(m);
++            }
++
++            Scanner src = new Scanner(System.in);
++            System.out.println("Please enter the movies full name");
++            String nameOfMovie = src.nextLine();
++            System.out.println(checkMoviesSearch(nameOfMovie, searchResults));
++        }
++
++        else if (input == 4) {
++            System.out.println("You choose your watched list: ");
++        }
++
++        else if (input == 5) {
++            System.out.println("You choose your saved list: ");
++        }
++    }
++
++    public void chooseMovie(){
++        Scanner cs = new Scanner(System.in);
++        System.out.println("\n\n");
++        System.out.println("Please press the number of the movie you want to watch");
++        int movieNumberToWatch = cs.nextInt();
++        System.out.println("you have chosen " + choseResults(movieNumberToWatch));
++    }
++
++    public String choseResults(int movieNumberToWatch){
++        ArrayList<Media> wannaWatch = Collection.movies;
++        return  wannaWatch.get(movieNumberToWatch).getName();
++    }
++
++    public void youHaveChosenMovie(){
++        System.out.println("\n\n");
++        System.out.println("You now have following choices: ");
++        System.out.println("Press 1 if you want to watch the movie ");
++        System.out.println("Press 2 if you want to save the movie to your list");
++        Scanner scan1 = new Scanner(System.in);
++        int input = scan1.nextInt();
++        movieOption(input);
++    }
++
++    public void movieOption(int input){
++        if (input == 1) {
++            System.out.println("The movie is now playing ");
++        }else if (input == 2){
++            System.out.println("The movie has been added to your list");
++        }else {
++            System.out.println("Option does not exist, please choose the available options ");
++        }
++    }
++
++    public ArrayList<Media> search(){
++
++    }
++
++}
