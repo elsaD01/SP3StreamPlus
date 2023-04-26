@@ -1,4 +1,6 @@
-;import java.util.Scanner;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collection;
 
 
 public class TextUI {
@@ -12,14 +14,12 @@ public class TextUI {
 
 
     }
-
     public String getUserInput() {
         System.out.println("hello, if you want to log in press 1,or to sign up press 2 ");
         return scanner.nextLine();
 
 
     }
-
 
     public void logIn() {
         System.out.println("Enter please log in with your username");
@@ -50,17 +50,6 @@ public class TextUI {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
     public void createUser() {
         System.out.println("please enter your full name");
         String fullname = scanner.nextLine();
@@ -75,14 +64,6 @@ public class TextUI {
             System.out.println("your username or password cannot be used");
         }
     }
-}
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Scanner;
-
-public class TextUI {
-
 
     public void pickMedia(ArrayList<Media> medias){
 
