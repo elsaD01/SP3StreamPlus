@@ -20,6 +20,7 @@ public class TextUI {
 
     }
 
+
     public void logIn() {
         System.out.println("Enter please log in with your username");
         String username = scanner.nextLine();
@@ -29,17 +30,36 @@ public class TextUI {
         if (userhandler.login(password, username)) {
             System.out.println("welcome to Chill  " + username);
         } else {
-            for (int attempts = 0; attempts < 3; attempts++) {
-                System.out.println("password is incorrect or username");
-                System.out.println("enter your password again");
-                password= scanner.nextLine();
-                if (userhandler.login(password, username)) {
-                    System.out.println("welcome to Chill  " + username);
-
+            int attempts = 0;
+            while (attempts < 3) {
+                System.out.println("Password is incorrect or username is invalid");
+                System.out.println("Enter your username");
+                username = scanner.nextLine();
+                System.out.println("Enter your password again");
+                password = scanner.nextLine();
+                if (userhandler.login(username, password)) { // Updated parameter order
+                    System.out.println("Welcome to Chill  " + username);
+                    break; // Exit the loop after successful login
+                } else {
+                    attempts++;
                 }
+            }
+            if (attempts == 3) {
+                System.out.println("Maximum login attempts reached. Exiting...");
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
 
     public void createUser() {
         System.out.println("please enter your full name");

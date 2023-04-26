@@ -27,8 +27,6 @@ public class UserHandler {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)){//should username = name
                 return true;
             }
-
-
         }
         return false;
 
