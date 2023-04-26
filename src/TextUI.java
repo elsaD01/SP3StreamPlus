@@ -1,10 +1,16 @@
+import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collection;
 
 
 public class TextUI {
+
     Scanner scanner;
+
+    ArrayList<Media> movies = new ArrayList<>();
+
+    CollectionLab collection = new CollectionLab();
     UserHandler userhandler;
     User user = new User();
 
@@ -67,7 +73,7 @@ public class TextUI {
 
     public void pickMedia(ArrayList<Media> medias){
 
-        TextUI textUI = new TextUI();
+        TextUI textUI = new TextUI(userhandler);
         System.out.println("Menu: Choose type of media: ");
 
         Scanner scan = new Scanner(System.in);
@@ -123,7 +129,7 @@ public class TextUI {
     }
 
     public String choseResults(int movieNumberToWatch){
-        ArrayList<Media> wannaWatch = Collection.movies;
+        ArrayList<Media> wannaWatch = CollectionLab.movies;
         return  wannaWatch.get(movieNumberToWatch).getName();
     }
 
@@ -157,7 +163,7 @@ public class TextUI {
 
     public ArrayList<Media> fetchSearchResults(String searchString){
         ArrayList<Media> searchResults = new ArrayList<>();
-        for (Media m : Collection.movies){
+        for (Media m : CollectionLab.movies){
             if(m.getName().toLowerCase().contains(searchString.toLowerCase()))
             {
                 searchResults.add(m);

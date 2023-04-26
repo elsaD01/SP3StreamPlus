@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Collection {
+public class CollectionLab {
 
     public static ArrayList<Media> movies;
 

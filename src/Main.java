@@ -20,10 +20,10 @@ public class Main {
         userHandler.saveUsers();
 
         //Here we call the method to read the movie data so the user can pick the specific media they want.
-        TextUI textui = new TextUI();
-        Collection.movies = textui.readMovieData();
-        TextUI text = new TextUI();
-        text.pickMedia(Collection.movies);
+        FileIO fileIO = new FileIO();
+        CollectionLab.movies = fileIO.readMovieData();
+        TextUI text = new TextUI(userHandler);
+        text.pickMedia(CollectionLab.movies);
     }
 
 }
