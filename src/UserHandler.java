@@ -27,7 +27,7 @@ public class UserHandler {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)){//should username = name
                 return true;
             }
-System.out.println(user.getUsername() +(user.getUsername().equals(username) && user.getPassword().equals(password )));
+
 
         }
         return false;
@@ -42,7 +42,7 @@ System.out.println(user.getUsername() +(user.getUsername().equals(username) && u
         }
         for (User users :
                 users) {
-            if (users.getFullName().equals(username))
+            if (users.getUsername().equals(username))
                 return false;
 
         }
