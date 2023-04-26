@@ -1,0 +1,13 @@
+Index: src/Collection.java
+===================================================================
+diff --git a/src/Collection.java b/src/Collection.java
+new file mode 100644
+--- /dev/null	
++++ b/src/Collection.java	
+@@ -0,0 +1,6 @@
++import java.util.ArrayList;
++
++public class Collection {
++
++    public static ArrayList<Media> movies;
++}
