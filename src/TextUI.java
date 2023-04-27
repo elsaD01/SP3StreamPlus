@@ -1,16 +1,14 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collection;
 
 
 public class TextUI {
 
     Scanner scanner;
 
-    ArrayList<Media> movies = new ArrayList<>();
-
-    CollectionLab collection = new CollectionLab();
     UserHandler userhandler;
     User user = new User();
 
@@ -21,20 +19,23 @@ public class TextUI {
 
     }
     public String getUserInput() {
-        System.out.println("hello, if you want to log in press 1,or to sign up press 2 ");
+        System.out.println("Welcome to Chills Stream ");
+        System.out.println("Press 1 to login or press 2 to sign up ");
         return scanner.nextLine();
-
 
     }
 
     public void logIn() {
-        System.out.println("Enter please log in with your username");
+        System.out.println("Enter your username ");
         String username = scanner.nextLine();
 
-        System.out.println("enter your password ");
+        System.out.println("Enter your password ");
         String password = scanner.nextLine();
         if (userhandler.login(password, username)) {
-            System.out.println("welcome to Chill  " + username);
+            System.out.println("Welcome to Chills " + username);
+            System.out.println("\n\n");
+
+
         } else {
             int attempts = 0;
             while (attempts < 3) {
@@ -44,7 +45,7 @@ public class TextUI {
                 System.out.println("Enter your password again");
                 password = scanner.nextLine();
                 if (userhandler.login(username, password)) { // Updated parameter order
-                    System.out.println("Welcome to Chill  " + username);
+                    System.out.println("Welcome to Chills  " + username);
                     break; // Exit the loop after successful login
                 } else {
                     attempts++;
@@ -59,16 +60,19 @@ public class TextUI {
     public void createUser() {
         System.out.println("please enter your full name");
         String fullname = scanner.nextLine();
-        System.out.println("Enter your username");
+        System.out.println("Please create your username: ");
         String username = scanner.nextLine();
-        System.out.println("please Enter your password");
+        System.out.println("Please create your password: ");
         String password = scanner.nextLine();
 
         if (userhandler.createUser(fullname, username, password)) {
-            System.out.println("welcome  " + username);
+            System.out.println("Welcome to Chills  " + username);
+            System.out.println("\n\n");
+
         } else {
-            System.out.println("your username or password cannot be used");
+            System.out.println("Username or password cannot be used, please login or sign up ");
         }
+
     }
 
     public void pickMedia(ArrayList<Media> medias){
@@ -123,9 +127,9 @@ public class TextUI {
     public void chooseMovie(){
         Scanner cs = new Scanner(System.in);
         System.out.println("\n\n");
-        System.out.println("Please press the number of the movie you want to watch");
+        System.out.println("Please enter the number of the movie you want to watch");
         int movieNumberToWatch = cs.nextInt();
-        System.out.println("you have chosen " + choseResults(movieNumberToWatch));
+        System.out.println("Chosen movie:  " + choseResults(movieNumberToWatch));
     }
 
     public String choseResults(int movieNumberToWatch){
@@ -134,20 +138,33 @@ public class TextUI {
     }
 
     public void youHaveChosenMovie(){
-        System.out.println("\n\n");
+        System.out.println("\n");
         System.out.println("You now have following choices: ");
         System.out.println("Press 1 if you want to watch the movie ");
-        System.out.println("Press 2 if you want to save the movie to your list");
+        System.out.println("Press 2 if you want to save movies to your list");
         Scanner scan1 = new Scanner(System.in);
         int input = scan1.nextInt();
         movieOption(input);
     }
 
     public void movieOption(int input){
+        Scanner scan2 = new Scanner(System.in);
         if (input == 1) {
             System.out.println("The movie is now playing ");
-        }else if (input == 2){
-            System.out.println("The movie has been added to your list");
+
+        } else if (input == 2) {
+            System.out.println("Enter the name of the movie you want to save: ");
+            String movieName = scan2.nextLine();
+            try {
+                FileWriter csvWriter = new FileWriter("data/SavedMoviesList.csv", true);
+                csvWriter.append(movieName);
+                csvWriter.append("\n");
+                csvWriter.flush();
+                csvWriter.close();
+                System.out.println("The movie has been added to your list.");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }else {
             System.out.println("Option does not exist, please choose the available options ");
         }

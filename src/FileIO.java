@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class FileIO {
 
-
     ArrayList<Media> movies = new ArrayList<>();
 
     ArrayList<Media> series = new ArrayList<>();
 
+    CollectionLab collection = new CollectionLab();
 
 
     public ArrayList<Media> readMovieData(){
         try{
-            Scanner scan = new Scanner(new File("data/movieData.csv"));
+            Scanner scan = new Scanner(new File("data/MovieData.csv"));
             while (scan.hasNextLine()){
                 String line = scan.nextLine();
                 String[] lineData = line.split(";");
