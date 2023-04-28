@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        UserHandler userHandler = new UserHandler("users.txt");
+        UserHandler userHandler = new UserHandler("data/UserLogin.csv");
         TextUI textUI = new TextUI(userHandler);
         userHandler.loadusers();
         String userinput = textUI.getUserInput();
