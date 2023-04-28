@@ -4,36 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dae8378-5c46-41b1-91cd-e9a8c9e8b969" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/Classdiagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__12_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__12_41__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__12_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__12_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__13_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__13_01__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__13_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__13_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__13_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023__13_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_18__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_18__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_24__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_24__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_24__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_33__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_36__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_36__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_36__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2023__13_38__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_24_2023_1_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_24_2023_1_47_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_24_2023_1_49_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_24_2023_1_49_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_24_2023_1_51_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_24_2023_1_51_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2023__12_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2023__12_43__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2023__12_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2023__12_50__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2023__12_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2023__12_55__Changes_.xml" afterDir="false" />
+    <list default="true" id="6dae8378-5c46-41b1-91cd-e9a8c9e8b969" name="Changes" comment="Changes and fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,14 +20,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="UML Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Main" />
+        <entry key="$PROJECT_DIR$" value="Elsa" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,19 +53,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
@@ -115,6 +86,7 @@
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +98,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682327094523</updated>
-      <workItem from="1682581259540" duration="14968000" />
     </task>
     <task id="LOCAL-00001" summary="user">
       <created>1682329315365</created>
@@ -149,18 +120,8 @@
       <option name="project" value="LOCAL" />
       <updated>1682631759571</updated>
     </task>
-    <task id="LOCAL-00004" summary="Changes and fixes.2">
-      <created>1682631837758</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1682631837758</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -188,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TextUI and Collection" />
     <MESSAGE value="OMGMGGG" />
-    <option name="LAST_COMMIT_MESSAGE" value="OMGMGGG" />
+    <MESSAGE value="Changes and fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes and fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
