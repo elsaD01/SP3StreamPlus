@@ -3,44 +3,35 @@ import java.util.Scanner;
 
 public class User {
 
-        private String fullName;
-        private String password;
-        private String username;
+    private String fullName;
+    private String password;
+    private String username;
 
 
-        public User(String fullName, String password, String username) {
+    public User(String fullName, String username, String password) {
 
-            this.fullName = fullName;
-            this.password = password;
-            this.username = username;
-        }
+        this.fullName = fullName;
+        this.password = password;
+        this.username = username;
+    }
 
     public String getUsername() {
         return username;
     }
 
-    public User() {
+    public String getPassword() {
 
-
-
-     }
-        public String getPassword() {
-
-            return password;
-
-
-        }
-
-            public  String getFullName() {
-            return fullName;
-        }
-
-
-
-
+        return password;
 
 
     }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+
+}
 
 
 

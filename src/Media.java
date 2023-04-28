@@ -15,6 +15,10 @@ public abstract class Media {
 
     }
 
+    public double getRating() {
+        return rating;
+    }
+
     @Override
     public String toString() {
 
