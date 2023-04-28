@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,7 +13,6 @@ public class TextUI {
 
     CollectionLab collection = new CollectionLab();
     UserHandler userhandler;
-    User user = new User();
 
     public TextUI(UserHandler userHandler) {
         this.userhandler = userHandler;
@@ -33,7 +33,7 @@ public class TextUI {
 
         System.out.println("enter your password ");
         String password = scanner.nextLine();
-        if (userhandler.login(password, username)) {
+        if (userhandler.login(username,password)) {
             System.out.println("welcome to Chill  " + username);
         } else {
             int attempts = 0;
@@ -43,9 +43,9 @@ public class TextUI {
                 username = scanner.nextLine();
                 System.out.println("Enter your password again");
                 password = scanner.nextLine();
-                if (userhandler.login(username, password)) { // Updated parameter order
+                if (userhandler.login(username, password)) {
                     System.out.println("Welcome to Chill  " + username);
-                    break; // Exit the loop after successful login
+                    break;
                 } else {
                     attempts++;
                 }
@@ -82,6 +82,7 @@ public class TextUI {
         System.out.println("3-Search");
         System.out.println("4-Watched");
         System.out.println("5-Saved");
+        System.out.println("6-Search after rating");
         int input = scan.nextInt();
 
         if(input == 1){
@@ -118,14 +119,38 @@ public class TextUI {
         else if (input == 5) {
             System.out.println("You choose your saved list: ");
         }
+        else if (input == 6) {
+            System.out.println("You choose movie rating ");
+            System.out.println("here are the movies that have rating higher than 8.5");
+
+            for(Media m: CollectionLab.movies) {
+
+                if(m.getRating() >= 8.5) {
+                    System.out.println(m.getName() + " - " + m.getRating());
+                }
+
+            }
+
+
+        }
     }
 
     public void chooseMovie(){
-        Scanner cs = new Scanner(System.in);
-        System.out.println("\n\n");
-        System.out.println("Please press the number of the movie you want to watch");
-        int movieNumberToWatch = cs.nextInt();
-        System.out.println("you have chosen " + choseResults(movieNumberToWatch));
+        try {
+            Scanner cs = new Scanner(System.in);
+            System.out.println("\n\n");
+            System.out.println("Please press the number of the movie you want to watch");
+            int movieNumberToWatch = cs.nextInt();
+            System.out.println("you have chosen " + choseResults(movieNumberToWatch));
+        }
+                catch(Exception e){
+                    System.out.println("you cannot write letters, write only number, you can try again now   ");
+                    Scanner cs = new Scanner(System.in);
+                    System.out.println("\n\n");
+                    System.out.println("Please press the number of the movie you want to watch");
+                    int movieNumberToWatch = cs.nextInt();
+                    System.out.println("you have chosen " + choseResults(movieNumberToWatch));
+            }
     }
 
     public String choseResults(int movieNumberToWatch){
@@ -186,4 +211,16 @@ public class TextUI {
             System.out.println();
         }
     }
-}
+    public ArrayList<Media> searchMovieAfterRating() {
+        ArrayList<Media> searchRating = new ArrayList<>();
+        for (Media rating : CollectionLab.movies){
+            if (rating.getRating() < 8.5) {
+                searchRating.add(rating);
+            }
+        }
+        return searchRating;
+    }
+
+
+
+    }

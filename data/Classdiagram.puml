@@ -1,0 +1,93 @@
++@startuml 
+'https://plantuml.com/class-diagram 
+ 
+class Main 
+class User 
+class UserHandler 
+ 
+abstract Media 
+class Movies 
+class Series 
+class CollectionLab
+class FileIO
+class TextUI 
+
+Main : + static void main()
+
+Media : - String name
+Media : - double rating
+Media : - int releaseYear
+Media : + Media(String int, double, string int)
+Media : + String toString()
+Media : + String toName()
+
+CollectionLab : + static ArrayList<Media> movies
+CollectionLab : + static ArrayList<Media> series
+
+FileIO : + readMovieData()
+FileIO : ArrayList<Media> movies
+FileIO : ArrayList<Media> series
+
+Movies : + Movies(String int, double,String,int) 
+Movies : + String toString()
+ 
+Series : + Series(String, String, int, double)
+Series : + String toString()
+ 
+User : - String fullName 
+User : - String password 
+User : - String username 
+User : + User(String fullName, String password String username) 
+User : + String getFullName() 
+User : + String getPassword() 
+User : + String getUsername() 
+ 
+UserHandler : + ArrayList<User> users 
+UserHandler : + File file 
+UserHandler : + login(string userName, String password)
+UserHandler : + UserHandler(String)
+UserHandler : + creatUser(fullName,password,username)
+UserHandler : + isPasswordValid(String)
+UserHandler : + void loadusers()
+UserHandler : + void saveUsers
+
+TextUI : - Scanner scan 
+TextUI : - User user
+TextUI : - UserHandler userhandler
+TextUI : - ArrayList<Media> movies
+TextUI : - CollectionLab collection
+TextUI : + TextUI(UserHandler)
+TextUI : + String checkMoviesSearch(String nameOfMovie, ArrayList<Media> searchResults)
+TextUI : + void chooseMovie()
+TextUI : + String choseResults(int movieNumberToWatch)
+TextUI : + void clearTheConsole()
+TextUI : + void createUser()
+TextUI : + fetchSearchResults(String searchString)
+TextUI : + String getUserInput(String msg)
+TextUI : + void logIn()
+TextUI : + void movieOption(int input)
+TextUI : + void pickMedia(ArrayList<Media> medias)
+TextUI : + ArrayList<Media> search()
+TextUI : + void youHaveChosenMovie()
+
+
+
+Main *-- Media : has a
+FileIO *-- Media : has a
+CollectionLab *-- Media : has a
+User *-- Media : has-a
+User *-- UserHandler : has a
+TextUI *-- Media : has a
+
+ 
+Media <|-- Movies : is a 
+Media <|-- Series : is a 
+
+
+
+
+ 
+ 
+@enduml 
+
+ 

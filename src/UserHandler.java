@@ -10,8 +10,6 @@ import java.util.regex.Pattern;
 public class UserHandler {
 
 
-
-
     ArrayList<User> users = new ArrayList<>();
     File file;
 
