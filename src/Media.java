@@ -1,14 +1,35 @@
 public abstract class Media {
-    public int releaseYear;
-    public String rating;
-    public String genre;
-    public int age;
+    public final String name;
+    public final String year;
+    public final double rating;
 
-    public Media(int releaseYear, String rating, String genre, int age) {
-        this.releaseYear = releaseYear;
+    public String getName(){
+        return this.name;
+    }
+
+    public Media(String name, String year, double rating) {
+        this.name = name;
+        this.year = year;
         this.rating = rating;
-        this.genre = genre;
-        this.age = age;
+
+
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Media{" +
+                ", name='" + name + '\'' +
+                ", year='" + year + '\'' +
+                ", rating=" + rating +
+                '}';
     }
 
 }
+
+
+
