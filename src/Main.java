@@ -20,10 +20,13 @@ public class Main {
         }
         userHandler.saveUsers();
         //Here we call the method to read the movie data so the user can pick the specific media they want.
-        FileIO fileIO = new FileIO();
-        CollectionLab.movies = fileIO.readMovieData();
+        DatabaseIO data = new DatabaseIO();
+        CollectionLab.movies = DatabaseIO.readMovieData();
+       // data.readMovieData(CollectionLab.movies);
+
         TextUI text = new TextUI(userHandler);
         text.pickMedia(CollectionLab.movies);
+
 
 
     }

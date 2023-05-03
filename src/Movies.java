@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class Movies extends Media {
 
 
-    public Movies(String movieName, String movieYear, double movieRating) {
-        super(movieName, movieYear, movieRating);
+    public Movies(int id, String movieName, int movieYear,String categoryArray, double movieRating) {
+        super(id, movieName, movieYear, categoryArray, movieRating);
 
     }
 
