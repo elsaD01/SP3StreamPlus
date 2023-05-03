@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FileIO {
+public class FileIO implements IIO {
 
     ArrayList<Media> movies = new ArrayList<>();
 
@@ -11,8 +11,18 @@ public class FileIO {
 
     CollectionLab collection = new CollectionLab();
 
+    @Override
+    public void saveUserData() {
+        
+    }
 
-    public ArrayList<Media> readMovieData(){
+    @Override
+    public void savewatchedlist() {
+
+    }
+
+
+    /*public ArrayList<Media> readMovieData(){
         try{
             Scanner scan = new Scanner(new File("data/MovieData.csv"));
             while (scan.hasNextLine()){
@@ -38,7 +48,7 @@ public class FileIO {
             System.out.println(e + "Option do not exist.Try again");
         }
         return movies;
-    }
+    }*/
 
 
 }
