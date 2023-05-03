@@ -10,10 +10,6 @@ import java.util.Collection;
 public class TextUI {
 
     Scanner scanner;
-
-    ArrayList<Media> movies = new ArrayList<>();
-
-    CollectionLab collection = new CollectionLab();
     UserHandler userhandler;
 
     public TextUI(UserHandler userHandler) {
@@ -100,8 +96,8 @@ public class TextUI {
                 String movieS = i+ " - " + medias.get(i).getName();
                 System.out.println(movieS);
             }
-            textUI.chooseMovie();
-            textUI.youHaveChosenMovie();
+            chooseMovie();
+            youHaveChosenMovie();
 
         }
 
@@ -109,13 +105,15 @@ public class TextUI {
             System.out.println("You choose series, here's some options");
         }
         else if (input == 3){
-            ArrayList<Media> searchResults = textUI.search();
+            ArrayList<Media> searchResults = search();
             for(Media m : searchResults){
                 System.out.println(m);
             }
 
-            Scanner src = new Scanner(System.in);
-            System.out.println("Please enter the movies full name");
+
+           // har fået en liste over de film som macther søgning på dele af navnet og derefter skal du skrive det korrekte navn
+           Scanner src = new Scanner(System.in);
+            System.out.println("Please enter the movies full name to start the movie");
             String nameOfMovie = src.nextLine();
             System.out.println(checkMoviesSearch(nameOfMovie, searchResults));
         }
@@ -151,14 +149,14 @@ public class TextUI {
             int movieNumberToWatch = cs.nextInt();
             System.out.println("you have chosen " + choseResults(movieNumberToWatch));
         }
-                catch(Exception e){
-                    System.out.println("you cannot write letters, write only number, you can try again now   ");
-                    Scanner cs = new Scanner(System.in);
-                    System.out.println("\n\n");
-                    System.out.println("Please press the number of the movie you want to watch");
-                    int movieNumberToWatch = cs.nextInt();
-                    System.out.println("you have chosen " + choseResults(movieNumberToWatch));
-            }
+        catch(Exception e){
+            System.out.println("you cannot write letters, write only number, you can try again now   ");
+            Scanner cs = new Scanner(System.in);
+            System.out.println("\n\n");
+            System.out.println("Please press the number of the movie you want to watch");
+            int movieNumberToWatch = cs.nextInt();
+            System.out.println("you have chosen " + choseResults(movieNumberToWatch));
+        }
     }
 
     public String choseResults(int movieNumberToWatch){
@@ -201,7 +199,7 @@ public class TextUI {
 
     public ArrayList<Media> search(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter the exact name of the movie");
+        System.out.println("Please enter part of the moviename");
 
         String searchString = sc.nextLine();
         return fetchSearchResults(searchString);
@@ -243,5 +241,4 @@ public class TextUI {
     }
 
 
-
-    }
+}
