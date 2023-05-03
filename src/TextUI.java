@@ -94,10 +94,12 @@ public class TextUI {
         int input = scan.nextInt();
 
         if(input == 1){
+
             System.out.println("You choose movies, here's some options");
             for(int i = 0; i < medias.size(); i++){
 
                 String movieS = i+ " - " + medias.get(i).getName();
+                //String movieS = con.readData();
                 System.out.println(movieS);
             }
             textUI.chooseMovie();

@@ -1,7 +1,7 @@
-public class Series extends Media {
+/*public class Series extends Media {
 
 
-    public Series(String seriesName, String seriesYear, int episode, int season, double seriesRating) {
+  /*  public Series(String seriesName, String seriesYear, int episode, int season, double seriesRating) {
         super(seriesName, seriesYear, seriesRating);
 
     }
@@ -10,7 +10,7 @@ public class Series extends Media {
     @Override
     public String toString() {
         return super.toString();
-    }
+    }*/
 
-}
+//}
 
