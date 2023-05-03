@@ -26,6 +26,9 @@ public class Main {
         text.pickMedia(CollectionLab.movies);
 
 
+
+
+
     }
 }
 
