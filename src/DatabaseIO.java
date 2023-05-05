@@ -10,7 +10,7 @@ public class DatabaseIO implements IIO {
 
     //  Database credentials
     static final String USER = "root";
-    static final String PASS = "elsaalba77";
+    static final String PASS = "x";
     static ArrayList<Media> movies = new ArrayList<>();
 
  //   private List<Media> movies = readMovieData();
