@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dae8378-5c46-41b1-91cd-e9a8c9e8b969" name="Changes" comment="chasnges on sp3+...">
-      <change beforePath="$PROJECT_DIR$/data/SavedMoviesList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/SavedMoviesList.csv" afterDir="false" />
-    </list>
+    <list default="true" id="6dae8378-5c46-41b1-91cd-e9a8c9e8b969" name="Changes" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +28,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -181,7 +186,8 @@
     <MESSAGE value="Changes and fixes" />
     <MESSAGE value="file" />
     <MESSAGE value="chasnges on sp3+" />
-    <option name="LAST_COMMIT_MESSAGE" value="chasnges on sp3+" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SP3Stream$Main.ic" NAME="Main Coverage Results" MODIFIED="1682334020398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
