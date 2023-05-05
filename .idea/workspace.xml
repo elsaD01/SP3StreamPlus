@@ -90,7 +90,7 @@
       <recent name="C:\Users\skdk1\OneDrive\Desktop\Java\Monopoly\SP3Stream" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Chill">
     <configuration name="Chill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PackageChill.Chill" />
       <module name="SP3Stream" />
@@ -113,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Chill" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
